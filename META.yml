@@ -1,0 +1,16 @@
+name: PPI-XS
+version: 0.900
+abstract: XS acceleration for the core PPI package
+author: Richard Soderberg <rsod at cpan.org
+license: perl
+distribution_type: module
+build_requires:
+  File::Spec: 0.82
+  Test::More: 0.47
+requires:
+  perl: 5.005
+  PPI: 0.845
+no_index:
+  directory:
+    - inc
+generated_by: Module::Install version 0.36
