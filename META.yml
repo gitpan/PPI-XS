@@ -1,16 +1,30 @@
-name: PPI-XS
-version: 0.900
-abstract: XS acceleration for the core PPI package
-author: Richard Soderberg <rsod at cpan.org
-license: perl
-distribution_type: module
+---
+abstract: '(Minor) XS acceleration for PPI'
+author:
+  - 'Adam Kennedy <adamk@cpan.org>'
 build_requires:
+  ExtUtils::MakeMaker: 6.42
   File::Spec: 0.82
   Test::More: 0.47
-requires:
-  perl: 5.005
-  PPI: 0.845
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 0.86'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+module_name: PPI::XS
+name: PPI-XS
 no_index:
   directory:
     - inc
-generated_by: Module::Install version 0.36
+    - t
+requires:
+  PPI: 1.000
+  perl: 5.005
+resources:
+  ChangeLog: http://fisheye2.atlassian.com/changelog/cpan/trunk/PPI-XS
+  license: http://dev.perl.org/licenses/
+  repository: http://svn.ali.as/cpan/trunk/PPI-XS
+version: 0.901

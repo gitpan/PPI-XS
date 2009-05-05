@@ -2,6 +2,7 @@ package PPI::XS;
 
 # See POD at end for documentation
 
+use 5.005;
 use strict;
 use XSLoader;
 
@@ -10,12 +11,12 @@ use XSLoader;
 # to load in PPI as well. Pretty useless otherwise, because we
 # need to _overwrite_ the PPI methods, we can't have it loading
 # after we do.
-use PPI ();
+use PPI 1.000 ();
 
 # Define compatibility information
 use vars qw{$VERSION $PM_COMPATIBLE %EXCLUDE};
 BEGIN {
-	$VERSION       = '0.900';
+	$VERSION       = '0.901';
 	$PM_COMPATIBLE = '0.844';
 	%EXCLUDE       = ();
 }
@@ -81,7 +82,7 @@ __END__
 
 =head1 NAME
 
-PPI::XS - XS acceleration for the PPI perl parser
+PPI::XS - (Minor) XS acceleration for PPI
 
 =head1 DESCRIPTION
 
@@ -116,9 +117,7 @@ For other issues or comments, contact the maintainer.
 
 =head1 AUTHOR
 
-Richard Soderburg (Maintainer), erm@erm.erm
-
-Adam Kennedy, L<http://ali.as/>, cpan@ali.as
+Adam Kennedy E<lt>adamk@cpan.orgE<gt>
 
 =head1 SEE ALSO
 
@@ -126,8 +125,7 @@ L<PPI>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2005 Richard Soderberg and Adam Kennedy.
-All rights reserved.
+Copyright 2005 - 2009 Adam Kennedy.
 
 This program is free software; you can redistribute
 it and/or modify it under the same terms as Perl itself.
