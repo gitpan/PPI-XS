@@ -16,7 +16,7 @@ use PPI 1.000 ();
 # Define compatibility information
 use vars qw{$VERSION $PM_COMPATIBLE %EXCLUDE};
 BEGIN {
-	$VERSION       = '0.901';
+	$VERSION       = '0.902';
 	$PM_COMPATIBLE = '0.844';
 	%EXCLUDE       = ();
 }
@@ -42,7 +42,7 @@ if ( $VERSION > $PPI::VERSION ) {
 	# (example) PPI::Element::exclude_this
 } elsif ( $VERSION < $PPI::VERSION ) {
 	# It is newer, it has the option of excluding functions
-	if ( defined @PPI::XS_EXCLUDE ) {
+	if ( @PPI::XS_EXCLUDE ) {
 		# It as defined things for us to exclude
 		%EXCLUDE = map { $_ => 1 } @PPI::XS_EXCLUDE;
 	}
@@ -125,7 +125,7 @@ L<PPI>
 
 =head1 COPYRIGHT
 
-Copyright 2005 - 2009 Adam Kennedy.
+Copyright 2005 - 2013 Adam Kennedy.
 
 This program is free software; you can redistribute
 it and/or modify it under the same terms as Perl itself.
